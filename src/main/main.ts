@@ -11,7 +11,7 @@ function createWindow() {
     });
 
     if (process.env.NODE_ENV === 'production') {
-        win.loadFile('./build/index.html');
+        win.loadFile('index.html');
     } else {
         win.loadURL('http://localhost:8080');
     }

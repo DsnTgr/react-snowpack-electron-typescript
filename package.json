@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "author": "Dison Tangor <disontangor@gmail.com>",
   "description": "Template for Electron, Snowpack, React and Typescript",
-  "main": "main.js",
   "scripts": {
-    "dev": "concurrently \"npm run snowpack-dev\" \"npm run electron-start\"",
-    "electron-start": "electron .",
-    "snowpack-dev": "snowpack dev",
-    "snowpack-build": "snowpack build",
+    "dev": "concurrently \"npm run snowpack-render-dev\" \"npm run snowpack-main-build\" \"npm run electron-start\"",
+    "build": "concurrently \"npm run snowpack-main-build\" \"npm run snowpack-render-build\"",
+    "electron-start": "electron ./build/main.js",
+    "snowpack-main-build": "snowpack build --config ./src/snowpack.main.cfg.mjs",
+    "snowpack-render-dev": "snowpack dev --config ./src/snowpack.render.cfg.mjs",
+    "snowpack-render-build": "snowpack build --config ./src/snowpack.render.cfg.mjs",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
