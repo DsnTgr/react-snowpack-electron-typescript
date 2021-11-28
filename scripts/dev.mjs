@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
-const main_config = `./src/snowpack.main.cfg.mjs`;
-const render_config = `./src/snowpack.render.cfg.mjs`;
+const main_config = `./src/snowpack-main.cfg.mjs`;
+const render_config = `./src/snowpack-render.cfg.mjs`;
 
 const main_flags = [
     '--config', 

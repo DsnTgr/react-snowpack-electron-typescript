@@ -2,7 +2,7 @@
 export default {
   mount: {
     main: { url: '/' },
-    asserts: { url: "/", static: true },
+    // asserts: { url: "/", static: true },
   },
   plugins: [
     /* ... */
